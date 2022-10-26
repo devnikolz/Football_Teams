@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="teams.xsd"
+    generated="2011-11-05T23:09:59">
+
+<person>
+    <name>Sabin Tabirca</name>
+    <owner>WGB 1.81, UCC, Cokr</owner>
+    <history>111111111</history>
+    <image>barcelona</image>
+    <url>https://www.fcbarcelona.com/en/</url>
+</person>
+    <person>
+        <name>John Tabirca</name>
+        <owner>WGB 1.81, UCC, Cokr</owner>
+        <history>111111111</history>
+        <image>psg</image>
+        <url>https://en.psg.fr/</url>
+    </person>
+    <person>
+        <name>Sabinus Tabirca</name>
+        <owner>WGB 1.81, UCC, Cokr</owner>
+        <history>111111111</history>
+        <image>chelsea</image>
+        <url>https://www.fcbarcelona.com/en/</url>
+    </person>
+    <person>
+        <name>Saby Tabirca</name>
+        <owner>WGB 1.81, UCC, Cokr</owner>
+        <history>111111111</history>
+        <image>inter_milan</image>
+        <url>http://www.cs.ucc.ie/~stabirca</url>
+    </person>
+    <person>
+        <name>Sabinel Tabirca</name>
+        <owner>WGB 1.81, UCC, Cokr</owner>
+        <history>111111111</history>
+        <image>juventus</image>
+        <url>http://www.cs.ucc.ie/~stabirca</url>
+    </person>
+    <person>
+        <name>Sabin Tabirca</name>
+        <owner>WGB 1.81, UCC, Cokr</owner>
+        <history>111111111</history>
+        <image>liverpool</image>
+        <url>http://www.cs.ucc.ie/~stabirca</url>
+    </person>
+    <person>
+        <name>Sabina Tabirca</name>
+        <owner>WGB 1.81, UCC, Cokr</owner>
+        <history>111111111</history>
+        <image>manchester_city</image>
+        <url>http://www.cs.ucc.ie/~stabirca</url>
+    </person>
+    <person>
+        <name>Sabinus Tabirca</name>
+        <owner>WGB 1.81, UCC, Cokr</owner>
+        <history>111111111</history>
+        <image>manchester_united</image>
+        <url>http://www.cs.ucc.ie/~stabirca</url>
+    </person>
+<!--    <person>-->
+<!--        <name>Saby Tabirca</name>-->
+<!--        <owner>WGB 1.81, UCC, Cokr</owner>-->
+<!--        <history>111111111</history>-->
+<!--        <image>chelsea</image>-->
+<!--        <url>http://www.cs.ucc.ie/~stabirca</url>-->
+<!--    </person>-->
+<!--    <person>-->
+<!--        <name>Sabinel Tabirca</name>-->
+<!--        <owner>WGB 1.81, UCC, Cokr</owner>-->
+<!--        <history>111111111</history>-->
+<!--        <image>barcelona</image>-->
+<!--        <url>http://www.cs.ucc.ie/~stabirca</url>-->
+<!--    </person>-->
+</dataroot>
