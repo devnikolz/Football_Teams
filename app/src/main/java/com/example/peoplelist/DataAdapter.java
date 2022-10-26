@@ -44,7 +44,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder>{
         Log.d("Test image", id.toString());
 
         // still few lines of functionality
-        holder.name.setOnClickListener(new View.OnClickListener() {
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 // switch to another activity
@@ -54,7 +54,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder>{
                 context.startActivity(intent);
 
                 // do somthing with names[position]
-                Toast.makeText(context, ((TextView)view).getText().toString(), Toast.LENGTH_LONG).show();
+//                Toast.makeText(context, ((TextView)view).getText().toString(), Toast.LENGTH_LONG).show();
             }
         });
     }
