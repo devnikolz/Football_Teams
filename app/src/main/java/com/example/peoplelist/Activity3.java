@@ -36,8 +36,8 @@ public class Activity3 extends AppCompatActivity {
             }
         });
 
-        textView3 = findViewById(R.id.textView3);
-        textView3.setText(t.getName());
+//        textView3 = findViewById(R.id.textView3);
+//        textView3.setText(t.getName());
 
         textView4 = findViewById(R.id.textView4);
         textView4.setText(t.getHistory());

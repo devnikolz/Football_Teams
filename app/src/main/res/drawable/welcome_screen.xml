@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--Creating Welcome Screen with background color and image-->
+    <bitmap android:src="@color/black"/>
+    <item>
+        <bitmap android:src="@drawable/football_teams"
+                android:gravity="center"/>
+
+
+    </item>
+
+</layer-list>
