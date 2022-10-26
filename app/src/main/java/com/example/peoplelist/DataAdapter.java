@@ -37,6 +37,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder>{
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         // populate / bind the viewholder fields with data
         holder.name.setText(teams[position].getImage());
+        holder.networth.setText(teams[position].getNetworth());
         String team_image = teams[position].getImage();
         Integer id = context.getResources().getIdentifier(team_image, "drawable", context.getPackageName());
         holder.icon.setImageResource(id);
@@ -66,11 +67,13 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder>{
     public static class ViewHolder extends RecyclerView.ViewHolder{
 
         public TextView name;
+        public TextView networth;
         public ImageView icon;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             this.name = itemView.findViewById(R.id.textView);
+            this.networth = itemView.findViewById(R.id.textViewSubtitle);
             this.icon = itemView.findViewById(R.id.imageView);
         }
 

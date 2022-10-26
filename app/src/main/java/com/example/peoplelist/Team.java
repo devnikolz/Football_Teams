@@ -4,11 +4,12 @@ import java.io.Serializable;
 
 public class Team implements Serializable {
 
-    private String name, history, owner, image, url;
+    private String name, history, networth, owner, image, url;
 
-    public Team(String name, String history, String owner, String image, String url) {
+    public Team(String name, String history, String networth, String owner, String image, String url) {
         this.name = name;
         this.history = history;
+        this.networth = networth;
         this.owner = owner;
         this.image = image;
         this.url = url;
@@ -22,12 +23,20 @@ public class Team implements Serializable {
         this.name = name;
     }
 
+    public String getNetworth() {
+        return networth;
+    }
+
+    public void setNetworth(String networth) {
+        this.networth = networth;
+    }
+
     public String getHistory() {
         return history;
     }
 
-    public void setHistory(String phone) {
-        this.history = phone;
+    public void setHistory(String history) {
+        this.history = history;
     }
 
     public String getOwner() {

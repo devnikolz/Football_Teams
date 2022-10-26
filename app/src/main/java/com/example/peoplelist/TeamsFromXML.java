@@ -1,6 +1,7 @@
 package com.example.peoplelist;
 
 import android.content.Context;
+import android.util.Log;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
@@ -37,8 +38,9 @@ public class TeamsFromXML {
 
         // slice xmlDoc
         NodeList nameList = xmlDoc.getElementsByTagName("name");
-        NodeList addressList = xmlDoc.getElementsByTagName("owner");
-        NodeList phoneList = xmlDoc.getElementsByTagName("history");
+        NodeList addressList = xmlDoc.getElementsByTagName("fact");
+        NodeList historyList = xmlDoc.getElementsByTagName("history");
+        NodeList networthList = xmlDoc.getElementsByTagName("networth");
         NodeList imageList = xmlDoc.getElementsByTagName("image");
         NodeList urlList = xmlDoc.getElementsByTagName("url");
 
@@ -47,12 +49,14 @@ public class TeamsFromXML {
         // populate people
         for(int i=0;i< people.length;i++){
             String name = nameList.item(i).getFirstChild().getNodeValue();
+            String networth = networthList.item(i).getFirstChild().getNodeValue();
             String owner = addressList.item(i).getFirstChild().getNodeValue();
-            String history = phoneList.item(i).getFirstChild().getNodeValue();
+            String history = historyList.item(i).getFirstChild().getNodeValue();
             String image = imageList.item(i).getFirstChild().getNodeValue();
             String url = urlList.item(i).getFirstChild().getNodeValue();
+            Log.d("issue", history);
 
-            people[i] = new Team(name, history, owner, image, url);
+            people[i] = new Team(name, history, networth, owner, image, url);
         }
 
     }
