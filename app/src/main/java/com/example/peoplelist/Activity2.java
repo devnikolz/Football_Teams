@@ -7,7 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class Activity2 extends AppCompatActivity {
 
@@ -17,11 +21,17 @@ public class Activity2 extends AppCompatActivity {
     ImageView imageView2;
     TextView textView2;
 
+    ProgressBar progressBar;
+    int counter = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
+        progressLoad();
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Bundle b = getIntent().getExtras();
         Team t = (Team) b.getSerializable("team_name");
@@ -43,5 +53,23 @@ public class Activity2 extends AppCompatActivity {
         Integer id = Activity2.this.getResources().getIdentifier(t.getImage(), "drawable", Activity2.this.getPackageName());
         imageView2.setImageResource(id);
 
+    }
+
+    public void progressLoad() {
+        progressBar = (ProgressBar)findViewById(R.id.progressBar);
+
+        final Timer t = new Timer();
+        TimerTask tt = new TimerTask() {
+            @Override
+            public void run() {
+                counter ++;
+                progressBar.setProgress(counter);
+
+                if (counter == 100)
+                    t.cancel();
+            }
+        };
+
+        t.schedule(tt, 0, 5);
     }
 }

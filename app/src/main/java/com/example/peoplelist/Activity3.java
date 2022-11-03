@@ -6,9 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class Activity3 extends AppCompatActivity {
+
+    ProgressBar progressBar;
+    int counter = 0;
 
     private Button buttonNext;
 
@@ -21,6 +28,9 @@ public class Activity3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
+
+        progressLoad();
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         buttonNext =findViewById(R.id.buttonLink);
 
@@ -45,5 +55,23 @@ public class Activity3 extends AppCompatActivity {
         textView5 = findViewById(R.id.textView5);
         textView5.setText(t.getOwner());
 
+    }
+
+    public void progressLoad() {
+        progressBar = (ProgressBar)findViewById(R.id.progressBar);
+
+        final Timer t = new Timer();
+        TimerTask tt = new TimerTask() {
+            @Override
+            public void run() {
+                counter ++;
+                progressBar.setProgress(counter);
+
+                if (counter == 100)
+                    t.cancel();
+            }
+        };
+
+        t.schedule(tt, 0, 5);
     }
 }
