@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_baseline_sports_soccer_24"
+        android:title="Teams"/>
+
+    <item
+        android:id="@+id/stats"
+        android:icon="@drawable/ic_baseline_data_exploration_24"
+        android:title="Statistics"/>
+
+
+</menu>

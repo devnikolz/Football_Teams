@@ -13,6 +13,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.List;
+
 public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder>{
 
     private Context context;
@@ -58,6 +60,11 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder>{
             }
         });
     }
+
+//    // SearchView compoment
+//    public void updateList(List<ViewHolder>list){
+//        dis
+//    }
 
     @Override
     public int getItemCount() {

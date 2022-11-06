@@ -3,21 +3,26 @@
 
 package com.example.peoplelist;
 
+import static com.example.peoplelist.R.*;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {
 
-    // initialise the search view
-//    SearchView searchView;
+//    // initialise the bottom nav view bar
+//    BottomNavigationView navBar;
 
     private RecyclerView recyclerView = null;
     private DataAdapter adapter = null;
@@ -26,28 +31,45 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(layout.activity_main);
 
-        // searchView settings
-//        searchView.findViewById(R.id.searchView);
-//
-//        // setup Listener
-//        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-//            @Override
-//            public boolean onQueryTextSubmit(String query) {
-//                return false;
-//            }
-//
-//            @Override
-//            public boolean onQueryTextChange(String newText) {
-//                // need to filter the data
-////                filter_data(newText);
-//                return true;
-//            }
-//        });
+        // initialize and assign variable
+        BottomNavigationView bottomNavigationView = findViewById(id.navBar);
+
+        // setup the navBar manu view home
+        bottomNavigationView.setSelectedItemId(id.home);
+
+        // perform listener on items
+        bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                // add switch statement
+                switch (item.getItemId()) {
+
+                    // navigate to home screen
+                    case R.id.home:
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+
+                    // navigate to the whole different screen
+                    case R.id.stats:
+                        startActivity(new Intent(getApplicationContext(), Activity5.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+
+
+                    default:
+                        throw new IllegalArgumentException("Unknown error");
+
+                }
+
+            }
+        });
 
         // recycleView settings
-        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView = findViewById(id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
@@ -56,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
         Team[] teams = people.getPeople();
 
         // make the adapter and set it to recycleView
-        adapter = new DataAdapter(this, R.layout.row_layout, teams);
+        adapter = new DataAdapter(this, layout.row_layout, teams);
         recyclerView.setAdapter(adapter);
     }
 
