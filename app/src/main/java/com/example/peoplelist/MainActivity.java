@@ -82,18 +82,4 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
     }
 
-    // method
-//    private void filter_data(String newText) {
-//        // create new list
-//        List<Team> filtered_list = new ArrayList<>();
-//        // create for loop to iterate through data
-//        for (Team item: TeamsFromXML){
-//            if (item.getName().toLowerCase().contains(newText.toLowerCase())) {
-//                // if matches add item to filtered list
-//                filtered_list.add(item);
-//            }
-//        }
-//        // send to the adapter
-//        adapter.filter_list(fi);
-//    }
 }

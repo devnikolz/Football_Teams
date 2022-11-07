@@ -19,20 +19,25 @@
         android:layout_marginEnd="57dp"
         android:text="Parsing JSON DATA TEAMS"
         android:textSize="24sp"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/fetchList"
-        android:layout_width="370dp"
-        android:layout_height="504dp"
+
+    <TextView
+        android:id="@+id/fetch_result"
+        android:gravity="center"
+        android:layout_width="337dp"
+        android:layout_height="494dp"
         android:layout_above="@+id/fetchButton"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="21dp"
-        android:layout_marginEnd="19dp"
-        android:layout_marginBottom="13dp" />
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="2dp"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navBar"
