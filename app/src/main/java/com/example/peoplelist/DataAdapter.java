@@ -54,17 +54,11 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder>{
                 Team team = teams[holder.getAdapterPosition()];
                 intent.putExtra("team_name", team);
                 context.startActivity(intent);
-
-                // do somthing with names[position]
-//                Toast.makeText(context, ((TextView)view).getText().toString(), Toast.LENGTH_LONG).show();
             }
         });
     }
 
-//    // SearchView compoment
-//    public void updateList(List<ViewHolder>list){
-//        dis
-//    }
+
 
     @Override
     public int getItemCount() {

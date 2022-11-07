@@ -21,9 +21,6 @@ import com.google.android.material.navigation.NavigationBarView;
 
 public class MainActivity extends AppCompatActivity {
 
-//    // initialise the bottom nav view bar
-//    BottomNavigationView navBar;
-
     private RecyclerView recyclerView = null;
     private DataAdapter adapter = null;
     private TeamsFromXML people = null;
@@ -58,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(), Activity5.class));
                         overridePendingTransition(0, 0);
                         return true;
-
 
                     default:
                         throw new IllegalArgumentException("Unknown error");

@@ -42,6 +42,7 @@
 
     <TextView
         android:id="@+id/textViewSubtitle"
+        android:gravity="center"
         android:layout_width="113dp"
         android:layout_height="38dp"
         android:layout_marginTop="32dp"

@@ -22,7 +22,7 @@ public class Activity3 extends AppCompatActivity {
 
 
     // create and add the objects
-    TextView textView3, textView4, textView5;
+    TextView textView4, textView5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,9 +45,6 @@ public class Activity3 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-//        textView3 = findViewById(R.id.textView3);
-//        textView3.setText(t.getName());
 
         textView4 = findViewById(R.id.textView4);
         textView4.setText(t.getHistory());
